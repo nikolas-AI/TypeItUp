@@ -107,6 +107,7 @@ Layout
 body {
     margin: 0;
     padding: 0;
+    overflow: sc;
 }
 
 .header {
@@ -141,7 +142,7 @@ body {
 
 .test-wrapper {
     border: 10px solid rgb(50, 39, 93);
-    border-radius: 10px;
+    border-radius: 20px;
 }
 
 #origin-text {
@@ -165,8 +166,12 @@ body {
     flex: 1;
 }
 
+#test-area {
+    border-radius: 10px;
+}
 
-.meta {
+
+.ben {
     margin-top: 1em;
     display: flex;
     justify-content: space-between;
