@@ -129,11 +129,12 @@ body {
 .test-area {
     margin: 0px auto;
     max-width: 550px;
+    text-align: center;
 }
 
 .test-area {
     background-color: rgb(54, 94, 161);
-    margin-top: 5px;
+    margin-top: 25px;
     padding: 10px 2em;
     border-radius: 10px;
 }
