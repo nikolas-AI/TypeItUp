@@ -8,6 +8,7 @@ var time = [0,0,0,0];
 var stop;
 var timerRunning = false;
 
+// Add leading zero to numbers 9 or below:
 function addZero(timeStr) {
     if (timeStr <= 9) {
         timeStr = "0" + timeStr;
@@ -16,6 +17,7 @@ function addZero(timeStr) {
 
 }
 
+// Run a standard minute/second/milisecond timer:
 function runTimer() {
     let currentTime = addZero(time[0]) + ":" + addZero(time[1]) + ":" + addZero(time[2]);
     TIMER.innerHTML = currentTime;
@@ -26,6 +28,7 @@ function runTimer() {
     time[2] = Math.floor(time[3] - (time[1]*100) - time[0]*6000);
 }
 
+// Match the text entered with the provided text:
 function spellCheck() {
     let text = TESTAREA.value;
     let ogTextMatch = ORIGINTEXT.substring(0, text.length)
@@ -44,7 +47,7 @@ function spellCheck() {
     }
 }
 
-
+// Start the timer:
 function start() {
     let textLength = TESTAREA.value.length;
     if (textLength === 0 && !timerRunning) {
@@ -53,6 +56,8 @@ function start() {
     }
 }
 
+
+// Reset everything:
 function reset() {
     clearInterval(stop);
     stop = null;
@@ -65,7 +70,7 @@ function reset() {
 
 }
 
-
+// Event listeners
 TESTAREA.addEventListener("keypress", start, false);
 TESTAREA.addEventListener("keyup", spellCheck, false);
 RESET.addEventListener("click", reset, false);
