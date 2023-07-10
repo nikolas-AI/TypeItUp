@@ -110,14 +110,19 @@ body {
     overflow: sc;
 }
 
+img {
+    height: 100px;
+    border-radius: 10px;
+}
 .header {
-    padding: 1em 1em;
+    padding: 0.5em 0.5em;
     background-color: #05164c;
     color: rgb(227, 220, 216);
+    display: flex;
 }
 
 .header h1 {
-    text-align: center;
+    margin: auto;
 }
 
 .info {
